@@ -2,20 +2,58 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>카페</title>
+<title>cafe</title>
+<style type="text/css">
+
+#logo {
+	text-align: left;
+}
+.logo {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+#seh {
+	
+	text-align: left;
+	margin-top: 25px;
+	margin-left: 220px;
+	margin-bottom: 20px;
+	
+	
+}
+#txt {
+	border: 1px solid green;
+	border-radius: 15px;
+	height: 25px;
+	
+}
+#but {
+	border: 1px solid green; 
+	border-radius: 5px;
+}
+
+
+
+</style>
 </head>
 <body>
-
-<div class="logo">
+<div id="set">
+<div id="logo" class="logo" align="left">
 	<h1 class="logo_banner">
-	<a href="https://www.naver.com" class = "logo_naver"> 로고 </a>
-	<a href="https://section.cafe.naver.com/ca-fe/home" class = "logo_navercafe">카페</a>
+	
+	<a href="https://www.naver.com" class = "logo_naver" style="float: left;"><img alt="naver" src="./naver.png" ></a>
+	<a href="https://section.cafe.naver.com/ca-fe/home" class = "logo_navercafe"><img alt="naver" src="./cafe.png"></a>
 	</h1>
-<p></p>
-
 
 </div>
-
+<div id="seh">
+	<input id="txt" type="text" placeholder="  원하는 카페, 글을 찾아보세요" size="40"  >
+	<input id="but" type="button" value="검색" style="background: #54BD54; font-weight: bold;" > 
+</div>
+</div>
+<hr>
 
 
 </body>
