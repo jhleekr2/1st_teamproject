@@ -3,57 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <title>cafe</title>
-<style type="text/css">
 
+<script src="https://kit.fontawesome.com/e4a00f71db.js" crossorigin="anonymous"></script>
+
+<style type="text/css">
+div {
+	font-family: sans-serif;
+}
 #logo {
 	text-align: left;
-}
-.logo {
-	position: fixed;
 	top: 0;
 	left: 0;
+	position: fixed;
 }
 
-#seh {
-	
+#seh {	
 	text-align: left;
-	margin-top: 25px;
-	margin-left: 220px;
-	margin-bottom: 20px;
-	
-	
+ 	margin-top: 15px; 
+	margin-left: 150px;
+	margin-bottom: 15px;
+
 }
+
 #txt {
 	border: 1px solid green;
 	border-radius: 15px;
-	height: 25px;
-	
+	height: 25px;	
 }
+
 #but {
 	border: 1px solid green; 
 	border-radius: 5px;
+	background: #54BD54; 
+	font-weight: bold;
+	font-style: inherit;
+	margin-top: 15px;
+	margin-left: 10px;
+	margin-bottom: 15px;
 }
-
+#menudone {
+	align-items: flex-end;
+}
 
 
 </style>
 </head>
 <body>
-<div id="set">
-<div id="logo" class="logo" align="left">
-	<h1 class="logo_banner">
-	
-	<a href="https://www.naver.com" class = "logo_naver" style="float: left;"><img alt="naver" src="./naver.png" ></a>
-	<a href="https://section.cafe.naver.com/ca-fe/home" class = "logo_navercafe"><img alt="naver" src="./cafe.png"></a>
-	</h1>
 
-</div>
-<div id="seh">
-	<input id="txt" type="text" placeholder="  원하는 카페, 글을 찾아보세요" size="40"  >
-	<input id="but" type="button" value="검색" style="background: #54BD54; font-weight: bold;" > 
-</div>
+<!-- 로고 배너 -->
+<div id="set">
+	<div id="logo" class="logo" align="left">
+		<h1 class="logo_banner">
+		<a href="https://www.naver.com" class = "logo_naver" style="float: left;"><img alt="naver" src="./naver.png" ></a>
+		<a href="https://section.cafe.naver.com/ca-fe/home" class = "logo_navercafe"><img alt="naver" src="./cafe.png"></a>
+		</h1>
+	</div>
+
+<!-- 	검색 -->
+	<div id="seh">
+		<input id="txt" type="text" placeholder="  원하는 카페, 글을 찾아보세요" size="40"  >
+		<input id="but" type="button" value="검색" > 
+	</div>
 </div>
 <hr>
+
+<!-- 메뉴 버튼 -->
+<div id="menu" class="menu">
+	<i  id="cafehome" class="fa-solid fa-house"></i><span> 카페홈</span>
+	<p><i class="fa-solid fa-globe"></i><span> 이웃</span></p>
+	<p><i id="sub" class="fa-regular fa-rectangle-list"></i><span> 구독</span></p>
+	<p><i id="hot" class="fa-solid fa-fire"></i><span> 인기글</span></p>
+	<p><i id="ala" class="fa-solid fa-bell"></i><span> 내소식</span></p>
+	<p><i id="con" class="fa-regular fa-comment-dots"></i><span> 채팅</span></p>
+</div>
+
+
+
+
+
 
 
 </body>
