@@ -47,6 +47,49 @@ span:before{
 	display: inline-block;
 	
 }
+#header{
+	border-bottom: 1px solid #00af35;
+    background: #03c75a;
+}
+#header_content{
+	width: 1020px;
+	height:54px;
+	margin: 0 auto;
+}
+#header_content_left{
+	width: 480px;
+	height:54px;
+	margin-left:20px; 
+	float: left;
+}
+#header_content_left span{
+	display: inline-block;
+	height: 54px;
+	overflow: hidden;
+	font-size: 1px;
+	text-indent: -100px;
+	vertical-align: top;
+	
+}
+#header_content_left_naver{
+
+	background: url("../resources/img/N.png");
+	background-repeat: no-repeat;
+	background-position: 0 22px;
+	height: 35px !important;
+}
+#header_content_left_dic{
+}
+#header_content_left_papago{
+}
+#header_content_left_dicPro{
+}
+#header_content_left_trans{
+}
+#header_content_left_jisik{
+}
+
+
 
 
 
@@ -54,18 +97,20 @@ span:before{
 </head>
 
 <body>
-<!-- 윗부분 -->
-<div style=" border-bottom: 1px solid teal;">
-<div style=" margin: 0 auto; border-bottom:2px dashed yellow; height: 54px;width:1020px; height: 54px; ">
 
-<div style="border: 2px solid blue; width: 480px; height:54px; margin-left:20px; float: left;">
-	<span style="display: inline-block; width: 59px; height: 54px;"><a href="https://www.naver.com/">NAVER</a></span>
-	<span style="display: inline-block; width: 41px; height: 54px;">사전</span>
-	<span style="display: inline-block; width: 68px; height: 54px; ">파파고</span>
-	<span style="display: inline-block; width: 118px; height: 54px;">오픈사전PRO</span>
-	<span style="display: inline-block; width: 81px; height: 54px;">참여번역</span>
-	<span style="display: inline-block; width: 83px; height: 54px;">지식백과</span>
+<!-- 윗부분 -->
+<div id="header" >
+<div id="header_content">
+
+<div id="header_content_left" >
+	<span  id="header_content_left_naver" style="width: 59px;"><a href="https://www.naver.com/">NAVER</a></span>
+	<span id="header_content_left_dic" style="width: 41px;">사전</span>
+	<span id="header_content_left_papago" style="width: 68px;">파파고</span>
+	<span id="header_content_left_dicPro" style="width: 118px;">오픈사전PRO</span>
+	<span id="header_content_left_trans" style="width: 81px;">참여번역</span>
+	<span id="header_content_left_jisik" style="width: 83px;">지식백과</span>
 </div>
+
 <div style="float: right;">
 	<span><a href="https://nid.naver.com/nidlogin.login?url=https%3A%2F%2Fdict.naver.com%2F">로그인</a></span>
 	<span>icon</span>
