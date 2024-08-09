@@ -7,81 +7,191 @@
 <script src="https://kit.fontawesome.com/e4a00f71db.js" crossorigin="anonymous"></script>
 
 <style type="text/css">
-div {
+body{
 	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+#header {
+	position:fixed;
+    align-items: center;
+    padding: 10px 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+    z-index: 1000;
+    background-color: #FFF;
+}
+#tit {
+	position:fixed;
+	top: 25px;
+    left: 0;
+    align-items: center;
+    padding: 98px 20px;
+    padding-top: 70px;
+    z-index: 999;
+    width: 188px;
+    height: 100%;
 }
 #logo {
-	text-align: left;
-	top: 0;
-	left: 0;
-	position: fixed;
+/*   	text-align: left;   */
+/*  	top: 0;   */
+/*   	left: 0;  */
+/*   	display: inline-block;   */
+    display: flex;
+    align-items: center;
+    margin-top : 0;
+  	margin-left: 0;  
+   	margin-bottom: 0;
 }
-
+#logo img {
+    height: 38px;
+	margin-bottom: 0px;
+}
 #seh {	
-	text-align: left;
- 	margin-top: 15px; 
-	margin-left: 150px;
-	margin-bottom: 15px;
-
+ 	text-align: center;  
+/*   	top: 0;   */
+	margin-top : 0;
+  	margin-left: 180px;  
+   	margin-bottom: 0; 
+/*   	display: inline-block;   */
+/*  	align-items: left;   */
+    display: flex;
+    align-items: center;
 }
 
-#txt {
-	border: 1px solid green;
+#txt { 	
+	border: 1px solid #009f47;
 	border-radius: 15px;
 	height: 25px;	
+	padding: 0 10px;
 }
 
 #but {
-	border: 1px solid green; 
-	border-radius: 5px;
-	background: #54BD54; 
+	border: 1px solid #009f47; 
+	border-radius: 7px;
+	background: #009f47; 
 	font-weight: bold;
 	font-style: inherit;
-	margin-top: 15px;
 	margin-left: 10px;
-	margin-bottom: 15px;
+    height: 28px;
+    padding: 0 12px;
 }
-#menudone {
-	align-items: flex-end;
+
+.vertical-headline{
+   border-bottom : thin solid #ccc;
+   width: 2040px;
+	height : 0px; 
+   display: inline-block;
+   margin-top: 15px;
+	margin-bottom: 0;   
+   
+}
+.vertical-line{
+   border-right : thin solid #ccc;
+   width: 188px;
+   height : 1020px;
+   display: inline-block;
+   margin-top: 0px;
+   
+}
+.vertical-line2{
+   border-bottom : thin solid #ccc;
+   width: 180px;
+   height : 20px;
+   display: inline-block;
+/*    margin-top: 0px; */
+   
+}
+
+ li{ 
+ 	margin-bottom: 12px; 
+	margin-left: 0px; 
+ } 
+
+li:hover{ 
+	background-color: #98FB98; 
+	width: 125px;
+}
+.list > a{color: black;}
+a {text-decoration: none;}
+ul.list{
+	list-style-type: none;
+	margin: 0;
+	margin-left: 9px;
+	padding: 0;
 }
 
 
+#content {
+    margin-top: 90px; 
+    margin-left:230px;  
+    padding: 20px;
+}
+
+#tt{text-align: center; 
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
 </style>
 </head>
 <body>
 
-<!-- 로고 배너 -->
-<div id="set">
-	<div id="logo" class="logo" align="left">
-		<h1 class="logo_banner">
+<div id="header" >
+	<!-- 로고 배너 -->
+	<div id="logo" class="logo">
 		<a href="https://www.naver.com" class = "logo_naver" style="float: left;"><img alt="naver" src="./naver.png" ></a>
 		<a href="https://section.cafe.naver.com/ca-fe/home" class = "logo_navercafe"><img alt="naver" src="./cafe.png"></a>
-		</h1>
 	</div>
 
-<!-- 	검색 -->
+	<!-- 검색 -->
 	<div id="seh">
-		<input id="txt" type="text" placeholder="  원하는 카페, 글을 찾아보세요" size="40"  >
+		<input id="txt" type="text" placeholder="  원하는 카페, 글을 찾아보세요" size="40" >
 		<input id="but" type="button" value="검색" > 
 	</div>
+	<div class="vertical-headline">	</div>
 </div>
-<hr>
 
 <!-- 메뉴 버튼 -->
+<div id="tit">
 <div id="menu" class="menu">
-	<i  id="cafehome" class="fa-solid fa-house"></i><span> 카페홈</span>
-	<p><i class="fa-solid fa-globe"></i><span> 이웃</span></p>
-	<p><i id="sub" class="fa-regular fa-rectangle-list"></i><span> 구독</span></p>
-	<p><i id="hot" class="fa-solid fa-fire"></i><span> 인기글</span></p>
-	<p><i id="ala" class="fa-solid fa-bell"></i><span> 내소식</span></p>
-	<p><i id="con" class="fa-regular fa-comment-dots"></i><span> 채팅</span></p>
+<p></p>
+<div class="vertical-line">
+	<ul class="list">
+		<li><i class="fa-solid fa-house"></i><a href="#" onclick="location.href ='https://section.cafe.naver.com/ca-fe/home'"> 카페홈</a></li>
+		<li><i class="fa-solid fa-circle-check"></i><a href="#" onclick="location.href ='https://cafe.naver.com/ca-fe/home/town/talks'"> 이웃</a></li>
+		<li><i id="sub" class="fa-regular fa-rectangle-list"></i><a href="#" onclick="location.href ='https://nid.naver.com/nidlogin.login?url=https%3A%2F%2Fsection.cafe.naver.com%2Fca-fe%2Fhome%2Ffeed'"> 구독</a></li>
+		<li><i id="hot" class="fa-solid fa-fire"></i><a href="#" onclick="location.href ='https://section.cafe.naver.com/ca-fe/home/cafe-hots'"> 인기글</a></li>
+		<li><i id="ala" class="fa-solid fa-bell"></i><a href="#" onclick="location.href ='https://nid.naver.com/nidlogin.login?url=https%3A%2F%2Fsection.cafe.naver.com%2Fca-fe%2Fhome%2Fmy-news'"> 내소식</a></li>
+		<li><i id="con" class="fa-regular fa-comment-dots"></i><a href="#" onclick="location.href ='https://nid.naver.com/nidlogin.login?svctype=64&url=https%3A%2F%2Ftalk.cafe.naver.com%2Fchannels'"> 채팅</a></li>
+		</ul>
+	<div class="vertical-line2">
+	</div>	
+	</div>
+	</div>
 </div>
 
-
-
-
-
-
-
+<div id="content">
+    <h3>카페홈</h3><br>
+    <div id="editor">
+    	<div id="tt" style="border: 1px solid #98FB98; border-radius:20px; background-color: #98FB98; width: 100px; height: 40px;">내 카페</div>
+    	
+    	<div id="best">
+       	<p><i class="fa-solid fa-fire"></i><a style="font-weight: bold;"> 인기글</a><span style="color: #808080;"> 오전 7시 기준</span><br><br>
+       	<a href="https://cafe.naver.com/bakingschool?iframe_url_utf8=%2FArticleRead.nhn%253Fclubid%3D11678620%2526articleid%3D478917%2526art%3DaW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtcG9wdWxhcg.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjQ3ODkxNywiaXNzdWVkQXQiOjE3MjMxNjE5ODIwNTgsImNhZmVJZCI6MTE2Nzg2MjB9.keidxy3BJK7mb6zmh2ZHtshEIOu8mqttf-a_-DzsUUk">
+       	<img alt="test" src="../resources/img/test2.png" style="border-radius: 20%"></a><br><br>
+       	<a id="test1" href="https://cafe.naver.com/bakingschool?iframe_url_utf8=%2FArticleRead.nhn%253Fclubid%3D11678620%2526articleid%3D478917%2526art%3DaW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtcG9wdWxhcg.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjQ3ODkxNywiaXNzdWVkQXQiOjE3MjMxNjE5ODIwNTgsImNhZmVJZCI6MTE2Nzg2MjB9.keidxy3BJK7mb6zmh2ZHtshEIOu8mqttf-a_-DzsUUk">
+       	바나나 초코바</a><br>
+       	<a style="color: #808080" >베이킹스쿨-굽고 먹고</a><br>
+       	<a href="https://cafe.naver.com/jpnstory?iframe_url_utf8=%2FArticleRead.nhn%253Fclubid%3D10110775%2526articleid%3D3676220%2526art%3DaW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtcG9wdWxhcg.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjM2NzYyMjAsImlzc3VlZEF0IjoxNzIzMTAyNzI2MjA0LCJjYWZlSWQiOjEwMTEwNzc1fQ.-KjM6hlcKpmqpbUfoxrkEaCSpx0w0WVVXrG_KFonp8s" >
+       	<img alt="test" src="../resources/img/test.png" style="border-radius: 20%"></a><br><br>
+       	<a id="test1" href="https://cafe.naver.com/jpnstory?iframe_url_utf8=%2FArticleRead.nhn%253Fclubid%3D10110775%2526articleid%3D3676220%2526art%3DaW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtcG9wdWxhcg.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjM2NzYyMjAsImlzc3VlZEF0IjoxNzIzMTAyNzI2MjA0LCJjYWZlSWQiOjEwMTEwNzc1fQ.-KjM6hlcKpmqpbUfoxrkEaCSpx0w0WVVXrG_KFonp8s">
+       	가방을 사니 물을 주네요</a><br>
+       	<a style="color: #808080">네일동:일본여행카페</a>
+    	</p>
+    	</div>
+    </div>
+</div>
 </body>
 </html>
