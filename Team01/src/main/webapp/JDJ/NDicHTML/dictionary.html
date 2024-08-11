@@ -8,13 +8,15 @@
 body{
 	margin: 0px;
 }
-span:before{
+
+.header_content_left_element_wrap::before{
 	content: "";
 	position: absolute;
 	top: 20px;
 	height: 15px;
 	width: 1px;
 	border-left: 1px solid black;
+	left: 135px;
 }
 #top li{
 	display: inline-block;
@@ -62,33 +64,65 @@ span:before{
 	margin-left:20px; 
 	float: left;
 }
-#header_content_left span{
-	display: inline-block;
+#header_content_left a span{
+	float: left;
+	/*display: inline-block;*/ 
 	height: 54px;
-	overflow: hidden;
-	font-size: 1px;
+	/*overflow: hidden;*/
+	font-size: 0px;
 	text-indent: -100px;
 	vertical-align: top;
 	
 }
 #header_content_left_naver{
 
-	background: url("../resources/img/N.png");
+	background: url("../img/Nsp_gnb_220427.png");
 	background-repeat: no-repeat;
-	background-position: 0 22px;
 	height: 35px !important;
+	background-position: 0 22px;
 }
 #header_content_left_dic{
+	background: url("../img/Nsp_gnb_220427.png");
+	background-repeat: no-repeat;
+	height: 25px !important;
+	background-position: 0 -20px;
+	margin-top: 15px;
 }
 #header_content_left_papago{
+	background: url("../img/Nsp_gnb_220427.png");
+	background-repeat: no-repeat;
+	width: 59px !important; 
+	height: 20px !important;
+	background-position: -30px -110px;
+	margin-top: 18px;
 }
 #header_content_left_dicPro{
+	background: url("../img/Nsp_gnb_220427.png");
+	background-repeat: no-repeat;
+	width: 100px !important; 
+	height: 20px !important;
+	background-position: 0 -231px;
+	margin-top: 18px;
 }
 #header_content_left_trans{
+	background: url("../img/Nsp_gnb_220427.png");
+	background-repeat: no-repeat;
+	width: 62px !important; 
+	height: 22px !important;
+	background-position: -88px -108px;
+	margin-top: 16px;
 }
 #header_content_left_jisik{
+	background: url("../img/Nsp_gnb_220427.png");
+	background-repeat: no-repeat;
+	width: 65px !important; 
+	height: 20px !important;
+	background-position: -159px -109px;
+	margin-top: 17px;
 }
-
+.header_content_left_element_wrap{
+	margin-left: 3px;
+}
 
 
 
@@ -103,12 +137,46 @@ span:before{
 <div id="header_content">
 
 <div id="header_content_left" >
-	<span  id="header_content_left_naver" style="width: 59px;"><a href="https://www.naver.com/">NAVER</a></span>
+
+	<a href="https://www.naver.com/" style="font-size: 0px;">
+	<span>
+	<span  id="header_content_left_naver" style="width: 59px;"></span>
+	</span>
+	</a>
+	
+	<a href="https://dict.naver.com/">
+	<span class="header_content_left_element_wrap">
 	<span id="header_content_left_dic" style="width: 41px;">사전</span>
+	</span>
+	</a>
+	
+	<a href="https://papago.naver.com/">
+	<span class="header_content_left_element_wrap">
 	<span id="header_content_left_papago" style="width: 68px;">파파고</span>
+	</span>
+	</a>
+	
+	<a href="https://open-pro.dict.naver.com/_ivo/home">
+	<span class="header_content_left_element_wrap">
 	<span id="header_content_left_dicPro" style="width: 118px;">오픈사전PRO</span>
+	</span>
+	</a>
+	
+	<a href="https://dict.naver.com/userstranslate/">
+	<span class="header_content_left_element_wrap">
 	<span id="header_content_left_trans" style="width: 81px;">참여번역</span>
+	</span>
+	</a>
+	
+	<a href="https://terms.naver.com/">
+	<span class="header_content_left_element_wrap">
 	<span id="header_content_left_jisik" style="width: 83px;">지식백과</span>
+	</span>
+	</a>
+	
+	
+	
+	
 </div>
 
 <div style="float: right;">
