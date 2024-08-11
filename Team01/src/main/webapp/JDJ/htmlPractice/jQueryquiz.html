@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+$(function() {
+	
+	$('#btnSend').attr("disabled", true);
+	
+	$('#btnSend').on("click", function() {
+		alert( $('#text').val() );
+		$('#text').val("");
+		$(this).attr("disabled", true);
+	});
+	
+	$('#text').on('keydown', function(e) {
+		//console.log(e);
+		//console.log($('#text').val());
+		if($('#text').val()==""){
+			return;
+		}
+		if(e.code == 'Enter'){
+			$('#btnSend').trigger('click');
+		}
+	});
+	
+	$('#text').on('keyup', function(e) {
+		if($('#text').val()==""){
+			$('#btnSend').attr("disabled", true);
+		}else{
+			$('#btnSend').attr("disabled", false);
+		}
+		
+	});
+	
+	
+	
+	
+})
+</script>
+</head>
+<body>
+<!-- QUIZ -->
+
+<!-- 전송버튼을 클릭하면 입력된 메시지를 alert()로 보여준다 -->
+
+<!-- 추가 1. -->
+<!--     메시지 입력창에서 엔터키(13)를 누르면
+      #btnSend에 클릭이벤트를 발생시킨다 -->
+
+<!-- 추가 2. -->
+<!--    입력된 값이 없으면 #btnSend 비활성화 -->
+<!--    값이 입력되면 #btnSend 활성화 -->
+
+<!--    ** 태그 비활성 속성 disabled -->
+
+<div>
+   <input id="text" type="text" name="msg">
+   <button id="btnSend">전송</button>
+</div>
+
+</body>
+</html>
