@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>cafe</title>
+<script src="https://kit.fontawesome.com/e4a00f71db.js" crossorigin="anonymous"></script>
+<style type="text/css">
+body{
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+#header {
+/* 상단로고 위치 설정  */
+	position:fixed;
+    align-items: center;
+    padding: 10px 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+    z-index: 1000;
+    background-color: #FFF;
+}
+#tit {
+/* 메뉴위치 설정 */
+	position:fixed;
+	top: 25px;
+    left: 0;
+    align-items: center;
+    padding: 98px 20px;
+    padding-top: 70px;
+    z-index: 999;
+    width: 188px;
+    height: 100%;
+}
+#logo {
+    display: flex;
+    align-items: center;
+    margin-top : 0;
+  	margin-left: 0;  
+   	margin-bottom: 0;
+}
+#logo img {
+/* 로고 이미지 크기 설정 */
+    height: 38px;
+	margin-bottom: 0px;
+}
+#seh {	
+/* 검색어 설정 */
+ 	text-align: center;  
+	margin-top : 0;
+  	margin-left: 180px;  
+   	margin-bottom: 0; 
+    display: flex;
+    align-items: center;
+}
+#but {
+/* 검색어 버튼 설정 */
+	border: 1px solid #009f47; 
+	border-radius: 7px;
+	background: #009f47; 
+	font-weight: bold;
+	font-style: inherit;
+	margin-left: 10px;
+    height: 28px;
+    padding: 0 12px;
+}
+
+
+#txt { 	
+/* 검색어 내부 설정 */
+	border: 1px solid #009f47;
+	border-radius: 15px;
+	height: 25px;	
+	padding: 0 10px;
+}
+
+
+/* 메뉴탭 설정 */
+ li{ 
+ 	margin-bottom: 12px; 
+	margin-left: 0px; 
+ } 
+
+.listMenu:hover{ 
+	background-color: #98FB98; 
+	width: 125px;
+}
+.list > a{color: black;}
+a {text-decoration: none;}
+ul.list{
+	list-style-type: none;
+	margin: 0;
+	margin-left: 9px;
+	padding: 0;
+}
+
+/* 내부 메뉴 위치 설정 */
+#content {
+    margin-top: 90px; 
+    margin-left:230px;  
+    padding: 20px;
+}
+#contentCafe {margin-left:250px;}
+#people {margin-left:250px;}
+#hotCafe {margin-left:250px;}
+
+#tt{text-align: center; 
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+/* 밑줄 긋기 */
+.vertical-headline{
+   border-bottom : thin solid #ccc;
+   width: 2040px;
+	height : 0px; 
+   display: inline-block;
+   margin-top: 15px;
+	margin-bottom: 0;   
+   
+}
+.vertical-line{
+   border-right : thin solid #ccc;
+   width: 188px;
+   height : 1020px;
+   display: inline-block;
+   margin-top: 0px;
+   
+}
+.vertical-line2{
+   border-bottom : thin solid #ccc;
+   width: 180px;
+   height : 20px;
+   display: inline-block;
+/*    margin-top: 0px; */
+   
+}
+.vertical-content{
+   border-bottom : thin solid #eee;
+   width: 100%;
+   height : 20px;
+   display: inline-block;
+/*    margin-top: 0px; */
+   
+}
+
+/* 라디오 버튼 */
+.cafeset {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+    appearance: none;
+    transition: background .5s ease-in-out;
+}
+input:checked{
+    background: #009f47;
+    border: none;
+}
+
+label{
+    transform: translateY(-60px);
+    cursor: pointer;
+    font-weight: bold;
+    color: #676767;
+}
+#cast:checked ~ #cast_1,
+#hobby:checked ~ #hobby_2,
+#com:checked ~ #com_3{
+    display: block;
+}
+
+/* 탭 */
+.tab{
+    width: 600px;
+}
+.con{
+	margin-top: 10px;
+    width: 100%;
+    display: none;
+    background: #fff;
+}
+a:visited {
+  color : black;
+}
+</style>
+</head>
+<body>
+
+<div id="header" >
+	<!-- 로고 배너 -->
+	<div id="logo" class="logo">
+		<a href="https://www.naver.com" class = "logo_naver" style="float: left;"><img alt="naver" src="./naver.png" ></a>
+		<a href="https://section.cafe.naver.com/ca-fe/home" class = "logo_navercafe"><img alt="naver" src="./cafe.png"></a>
+	</div>
+
+	<!-- 검색 -->
+	<div id="seh">
+		<input id="txt" type="text" placeholder="  원하는 카페, 글을 찾아보세요" size="40" >
+		<input id="but" type="button" value="검색" > 
+	</div>
+	<div class="vertical-headline">	</div>
+</div>
+
+<!-- 메뉴 버튼 -->
+<div id="tit">
+<div id="menu" class="menu">
+<p></p>
+<div class="vertical-line">
+	<ul class="list">
+		<li class="listMenu"><i class="fa-solid fa-house"></i><a href="#" onclick="location.href ='https://section.cafe.naver.com/ca-fe/home'"> 카페홈</a></li>
+		<li class="listMenu"><i class="fa-solid fa-circle-check"></i><a href="#" onclick="location.href ='https://cafe.naver.com/ca-fe/home/town/talks'"> 이웃</a></li>
+		<li class="listMenu"><i id="sub" class="fa-regular fa-rectangle-list"></i><a href="#" onclick="location.href ='https://nid.naver.com/nidlogin.login?url=https%3A%2F%2Fsection.cafe.naver.com%2Fca-fe%2Fhome%2Ffeed'"> 구독</a></li>
+		<li class="listMenu"><i id="hot" class="fa-solid fa-fire"></i><a href="#" onclick="location.href ='https://section.cafe.naver.com/ca-fe/home/cafe-hots'"> 인기글</a></li>
+		<li class="listMenu"><i id="ala" class="fa-solid fa-bell"></i><a href="#" onclick="location.href ='https://nid.naver.com/nidlogin.login?url=https%3A%2F%2Fsection.cafe.naver.com%2Fca-fe%2Fhome%2Fmy-news'"> 내소식</a></li>
+		<li class="listMenu"><i id="con" class="fa-regular fa-comment-dots"></i><a href="#" onclick="location.href ='https://nid.naver.com/nidlogin.login?svctype=64&url=https%3A%2F%2Ftalk.cafe.naver.com%2Fchannels'"> 채팅</a></li>
+		</ul>
+	<div class="vertical-line2"> <br><br>
+	
+	<ul class="list">
+		<li class="listMenu"><a href="#" onclick="location.href ='https://section.cafe.naver.com/ca-fe/home/themes/24?type=ar'">주제별 카페</a></li>
+		<li class="listMenu"><a href="#" onclick="location.href ='https://section.cafe.naver.com/ca-fe/home/areas'">지역별 카페</a></li>
+		<li class="listMenu"><a href="#" onclick="location.href ='https://section.cafe.naver.com/ca-fe/home/fans'">인기 팬카페</a></li>
+		<li class="listMenu"><a href="#" onclick="location.href ='https://section.cafe.naver.com/ca-fe/home/powers/popular'">대표 카페</a></li>
+		<li class="listMenu"><a href="#" onclick="location.href ='https://section.cafe.naver.com/ca-fe/home/rankings'">카페 랭킹</a></li>
+	</ul>
+	</div>	
+	</div>
+	</div>
+</div>
+
+<div id="content">
+    <h3>카페홈</h3><br>
+    <div id="editor">
+<!--     	<div id="tt" style="border: 1px solid #98FB98; border-radius:20px; background-color: #98FB98; width: 100px; height: 40px; font-weight:bold;">내 카페</div><br> -->
+    	
+    	<div id="best">
+   
+    		<i class="fa-solid fa-fire-flame-curved"></i><a style="font-weight: bold;"> 인기글</a><span style="color: #808080; font-size: 13px;"> 오전 7시 기준</span><br><br>
+    	    		       		
+     		<div id="blog" style=" float:left; margin-right: 10px;">
+       		<a href="https://cafe.naver.com/bakingschool?iframe_url_utf8=%2FArticleRead.nhn%253Fclubid%3D11678620%2526articleid%3D478917%2526art%3DaW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtcG9wdWxhcg.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjQ3ODkxNywiaXNzdWVkQXQiOjE3MjMxNjE5ODIwNTgsImNhZmVJZCI6MTE2Nzg2MjB9.keidxy3BJK7mb6zmh2ZHtshEIOu8mqttf-a_-DzsUUk">
+       		<img alt="test" src="../resources/img/test2.png" style="border-radius: 20%"></a><br>
+       		<a id="test1" href="https://cafe.naver.com/bakingschool?iframe_url_utf8=%2FArticleRead.nhn%253Fclubid%3D11678620%2526articleid%3D478917%2526art%3DaW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtcG9wdWxhcg.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjQ3ODkxNywiaXNzdWVkQXQiOjE3MjMxNjE5ODIwNTgsImNhZmVJZCI6MTE2Nzg2MjB9.keidxy3BJK7mb6zmh2ZHtshEIOu8mqttf-a_-DzsUUk">
+       		바나나 초코바</a><br>
+       		<a style="color: #808080; font-size: 13px;" >베이킹스쿨-굽고 먹고</a><br><br>
+     		</div>
+     		
+     		
+     		<div id="blog" style=" float:left; margin-right: 10px;">
+       		<a href="https://cafe.naver.com/jpnstory?iframe_url_utf8=%2FArticleRead.nhn%253Fclubid%3D10110775%2526articleid%3D3676220%2526art%3DaW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtcG9wdWxhcg.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjM2NzYyMjAsImlzc3VlZEF0IjoxNzIzMTAyNzI2MjA0LCJjYWZlSWQiOjEwMTEwNzc1fQ.-KjM6hlcKpmqpbUfoxrkEaCSpx0w0WVVXrG_KFonp8s" >
+       		<img alt="test" src="../resources/img/test.png" style="border-radius: 20%"></a><br>
+       		<a id="test" href="https://cafe.naver.com/jpnstory?iframe_url_utf8=%2FArticleRead.nhn%253Fclubid%3D10110775%2526articleid%3D3676220%2526art%3DaW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtcG9wdWxhcg.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjM2NzYyMjAsImlzc3VlZEF0IjoxNzIzMTAyNzI2MjA0LCJjYWZlSWQiOjEwMTEwNzc1fQ.-KjM6hlcKpmqpbUfoxrkEaCSpx0w0WVVXrG_KFonp8s">
+       		가방을 사니 물을 주네요</a><br>
+       		<a style="color: #808080;  font-size: 13px;">네일동:일본여행카페</a><br>
+     		</div>    		
+     		
+     		
+     		<div id="blog" style=" float:left; margin-right: 10px;">
+       		<a href="https://cafe.naver.com/truckerking?iframe_url_utf8=%2FArticleRead.nhn%253Fclubid%3D19984812%2526articleid%3D1036451%2526art%3DaW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtcG9wdWxhcg.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjEwMzY0NTEsImlzc3VlZEF0IjoxNzIzNTA5MjkzOTg4LCJjYWZlSWQiOjE5OTg0ODEyfQ.chXLlW7FY2a1rHSGfaxmmE1taHEeS8JXxNS9NbCj8lw" >
+       		<img alt="test" src="../resources/img/test5.png" style="border-radius: 20%"></a><br>
+       		<a id="test" href="https://cafe.naver.com/truckerking?iframe_url_utf8=%2FArticleRead.nhn%253Fclubid%3D19984812%2526articleid%3D1036451%2526art%3DaW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtcG9wdWxhcg.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjEwMzY0NTEsImlzc3VlZEF0IjoxNzIzNTA5MjkzOTg4LCJjYWZlSWQiOjE5OTg0ODEyfQ.chXLlW7FY2a1rHSGfaxmmE1taHEeS8JXxNS9NbCj8lw">
+       		2024 파리올림픽 최종 성적</a><br>
+       		<a style="color: #808080;  font-size: 13px;">영운모/화물/화물운송</a>
+     		</div><br>
+     		</div>
+    	</div>     
+    	<div class="vertical-content">
+   		</div>
+</div>
+
+      	<div id="contentCafe">
+    	<a id="concafe" href="https://cafe.naver.com/remonterrace?iframe_url_utf8=%2FArticleRead.nhn%253Fclubid%3D10298136%2526articleid%3D32528699%2526art%3DaW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtcG9wdWxhcg.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjMyNTI4Njk5LCJpc3N1ZWRBdCI6MTcyMzUwOTI5Mzk4OCwiY2FmZUlkIjoxMDI5ODEzNn0.1NaE-VJQA6UafnTxOsKEw2OHL4knbcfApbJz2WvNzIE"> 먹고 노는 주말 일상 (성심당 생귤시루 찐후기 포함)</a><br>
+       	<a style="color: #808080;  font-size: 13px;">레몬테라스[인테리어,리폼,DIY,요리]</a> <i class="fa-regular fa-heart"></i><a style="color: #808080;  font-size: 13px;"> 25</a> <i class="fa-regular fa-comment-dots"></i><a style="color: #808080;  font-size: 13px;"> 28</a><br>
+   
+    	<div class="vertical-content"></div>
+    	<a id="concafe" href="https://cafe.naver.com/okinawago?iframe_url_utf8=%2FArticleRead.nhn%253Fclubid%3D23068408%2526articleid%3D522898%2526art%3DaW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtcG9wdWxhcg.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjUyMjg5OCwiaXNzdWVkQXQiOjE3MjM1MDkyOTM5ODgsImNhZmVJZCI6MjMwNjg0MDh9.8ZPEkiyFqPWhaDKCr0hzvmB0wsL6k0FVdxi-HDoX6MI"> 보트 스노쿨링 꼭 해보세요^^</a><br>
+       	<a style="color: #808080;  font-size: 13px;">오키나와 달인 카페</a> <i class="fa-regular fa-heart"></i><a style="color: #808080;  font-size: 13px;"> 23</a> <i class="fa-regular fa-comment-dots"></i><a style="color: #808080;  font-size: 13px;"> 27</a><br>
+    	
+    	<div class="vertical-content"></div>
+    	<a id="concafe" href="https://cafe.naver.com/taesarang?iframe_url_utf8=%2FArticleRead.nhn%253Fclubid%3D15057835%2526articleid%3D775571%2526art%3DaW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtcG9wdWxhcg.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjc3NTU3MSwiaXNzdWVkQXQiOjE3MjM1MTE2ODAxOTYsImNhZmVJZCI6MTUwNTc4MzV9.jqHqCxFxn_cfJ52zp78K_eJMWWHkpPl3k8U_aH9qRDg"> [람빵] 드디어 가 본 천공사원</a><br>
+       	<a style="color: #808080;  font-size: 13px;">태사랑 - 태국, 방콕, 치앙마이</a> <i class="fa-regular fa-heart"></i><a style="color: #808080;  font-size: 13px;"> 22</a> <i class="fa-regular fa-comment-dots"></i><a style="color: #808080;  font-size: 13px;"> 15</a><br>
+    	
+    
+    	<div class="vertical-content"></div>
+    	<a id="concafe" href="https://cafe.naver.com/loyaltylife?iframe_url_utf8=%2FArticleRead.nhn%253Fclubid%3D30857348%2526articleid%3D176568%2526art%3DaW50ZXJuYWwtY2FmZS1hcnRpY2xlLXJlYWQtcG9wdWxhcg.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjE3NjU2OCwiaXNzdWVkQXQiOjE3MjM1MTE4MDI2MDgsImNhZmVJZCI6MzA4NTczNDh9.U_u7bsA6lFvh9DlXcF_cGwesvjnnC_EzbsG33a6oVUI"> 메리어트 치앙마이 일반 조식, 라운지 조식</a><br>
+       	<a style="color: #808080;  font-size: 13px;">[뉴스시사] 뉴스시사 스마트 컨슈머들의</a> <i class="fa-regular fa-heart"></i><a style="color: #808080;  font-size: 13px;"> 11</a> <i class="fa-regular fa-comment-dots"></i><a style="color: #808080;  font-size: 13px;"> 42</a><br>
+       	<br><br>
+
+    	</div>
+ <div id="people">
+ <h4>강남구 이웃 소식 <i class="fa-solid fa-person-rays"></i></h4>
+    	<a style="color: #03c75a;">이웃</a><a href="https://cafe.naver.com/ca-fe/town-talks/FtWvVxzlQleTqsTMkuyLmg?rcode=09680101"> 스마트스토어 하시는 초보 사장님 스마트 스토어 단톡방</a><br>
+       	<a style="color: #808080;  font-size: 13px;">역삼동</a>
+    	<div class="vertical-content"></div>
+    	
+    	<a style="color: #03c75a;">이웃</a><a href="https://cafe.naver.com/ca-fe/town-talks/XUX1ELqyS9-L5p31RZf8LA?rcode=09680105"> 극성수기 그랜드 하얏트 서울 상황! 수영장은 네이버예약 최소</a><br>
+       	<a style="color: #808080;  font-size: 13px;">삼성동</a> <i class="fa-regular fa-heart"></i><a style="color: #808080;  font-size: 13px;"> 4 </a> <i class="fa-regular fa-comment-dots"></i><a style="color: #808080;  font-size: 13px;"> 4</a><br>
+    	<div class="vertical-content"></div>
+    	
+    	<a style="color: #03c75a;">카페</a><a href="https://cafe.naver.com/superilmom?iframe_url=%2FArticleRead.nhn%3Fclubid%3D30647147%26articleid%3D7351%26tc%3Dsection_home_town_articles%26art%3DaW50ZXJuYWwtY2FmZS13ZWItc2VjdGlvbi1zZWFyY2gtbGlzdA.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjYWZlVHlwZSI6IkNBRkVfSUQiLCJhcnRpY2xlSWQiOjczNTEsImlzc3VlZEF0IjoxNzIzNTEzNTI5MDYyLCJjYWZlSWQiOjMwNjQ3MTQ3fQ.qEO4mGyui0yrsuvB8JaqeWgg1KnqAxmAO-yvv7em3f8"> 저신장으로 진료권유 어디로 가면 좋을까요</a><br>
+       	<a style="color: #808080;  font-size: 13px;">슈퍼일원맘</a> <i class="fa-regular fa-heart"></i><a style="color: #808080;  font-size: 13px;"> 1 </a> <i class="fa-regular fa-comment-dots"></i><a style="color: #808080;  font-size: 13px;"> 29</a><br>
+    	<div class="vertical-content"></div>
+    	
+    	<a style="color: #0076ff;">중고</a><a href="https://cafe.naver.com/ca-fe/town-sale/B7y22oxdQIyPhMVdRsKKNQ?rcode=09680101"> 최강야구 내야 3층 2연석 4연석</a><br>
+       	<a style="color: #808080;  font-size: 13px;">역삼동</a><br><br>
+  
+ </div>   
+ 
+ <div id="hotCafe">
+ <h4>주제별 인기 카페</h4>
+ 	<div class="tab">
+    <input type="radio" name="content2" id="cast" class="cafeset" checked>
+    <label for="cast">방송/연예</label>
+    <input type="radio" name="content2" id="hobby" class="cafeset"  >
+    <label for="hobby">취미</label>
+    <input type="radio" name="content2" id="com" class="cafeset" >
+    <label for="com">컴퓨터/통신</label>    
+          
+    <div id="cast_1" class="con">
+    	<img alt="test" src="../resources/img/tap1.png" style="border-radius: 20%; height: 60px; width: 60px;  vertical-align:middle;">
+       <span><a href="https://cafe.naver.com/7285175" style="font-weight: bold;">티비 문화 수다방 ★드라마,영화 콘서트,웹툰,넷플릭스,티빙,리뷰
+       </a><br>
+       <a style="color: #808080;  font-size: 15px;">TV드라마,예능,영화,콘서트,뮤지컬,연극,공연,전시,리뷰,라디오,웹툰</a><br>
+       <i class="fa-solid fa-user"></i><a style="color: #808080;  font-size: 13px;"> 28,336  열매2단계</a> <i class="fa-regular fa-circle-up"></i> <a style="color: #808080;  font-size: 13px;"> 13,782</a>
+       </span>
+    	<div class="vertical-content"></div>      
+    	 
+    	<img alt="test" src="../resources/img/tap2.png" style="border-radius: 20%; height: 60px; width: 60px;  vertical-align:middle;">
+       <span><a href="https://cafe.naver.com/dongjinshin" style="font-weight: bold;">세븐틴 대표팬카페[Wills]
+       </a><br>
+       <a style="color: #808080;  font-size: 15px;">세븐틴 대표팬카페 윌스(Wills)/ 플레디스/에스쿱스/조슈아/정한/원우</a><br>
+       <i class="fa-solid fa-user"></i><a style="color: #808080;  font-size: 13px;"> 5,409  잎새5단계</a> <i class="fa-regular fa-circle-up"></i> <a style="color: #808080;  font-size: 13px;"> 33,782</a>
+       </span>
+    	<div class="vertical-content"></div>    
+    	   
+    	<img alt="test" src="../resources/img/tap3.png" style="border-radius: 20%; height: 60px; width: 60px;  vertical-align:middle;">
+       <span><a href="https://cafe.naver.com/sindong25" style="font-weight: bold;">로스트아크 카페-로공카
+       </a><br>
+       <a style="color: #808080;  font-size: 15px;">로스트아크 대표 커뮤니티 로스트아크 카페-로공차 최고</a><br>
+       <i class="fa-solid fa-user"></i><a style="color: #808080;  font-size: 13px;"> 82,645  열매1단계</a> <i class="fa-regular fa-circle-up"></i> <a style="color: #808080;  font-size: 13px;"> 20,919</a>
+       </span>
+    	<div class="vertical-content"></div>       
+    </div>
+    <div id="hobby_2" class="con">
+        
+    	<img alt="test" src="../resources/img/tap4.png" style="border-radius: 20%; height: 60px; width: 60px;  vertical-align:middle;">
+       <span><a href="https://cafe.naver.com/wjdqhekahdkqhwk" style="font-weight: bold;">정보다모아보자
+       </a><br>
+       <a style="color: #808080;  font-size: 15px;">모든 정보들의 집합</a><br>
+       <i class="fa-solid fa-user"></i><a style="color: #808080;  font-size: 13px;"> 109  새싹2단계</a> <i class="fa-regular fa-circle-up"></i> <a style="color: #808080;  font-size: 13px;"> 255,012</a>
+       </span>
+    	<div class="vertical-content"></div>   
+    	    
+    	<img alt="test" src="../resources/img/tap5.png" style="border-radius: 20%; height: 60px; width: 60px;  vertical-align:middle;">
+       <span><a href="https://cafe.naver.com/everlandplantopia" style="font-weight: bold;">에버 플랜토피아
+       </a><br>
+       <a style="color: #808080;  font-size: 15px;">식물에 관심있고 진심인 사람들의 소통 공간입니다.</a><br>
+       <i class="fa-solid fa-user"></i><a style="color: #808080;  font-size: 13px;"> 5,207  씨앗5단계</a> <i class="fa-regular fa-circle-up"></i> <a style="color: #808080;  font-size: 13px;"> 36,018</a>
+       </span>
+    	<div class="vertical-content"></div>       
+    	
+    	<img alt="test" src="../resources/img/tap6.png" style="border-radius: 20%; height: 60px; width: 60px;  vertical-align:middle;">
+       <span><a href="https://cafe.naver.com/actionfigure" style="font-weight: bold;">액션피겨(액션피규어)
+       </a><br>
+       <a style="color: #808080;  font-size: 15px;">액션피겨 (피규어) 매니아 까페! 영화,뮤지션,스포츠,밀리터리,애니메이션</a><br>
+       <i class="fa-solid fa-user"></i><a style="color: #808080;  font-size: 13px;"> 123,300  나무4단계</a> <i class="fa-regular fa-circle-up"></i> <a style="color: #808080;  font-size: 13px;"> 24,165</a>
+       </span>
+    	<div class="vertical-content"></div>       
+    </div>
+    <div id="com_3" class="con">
+   
+       	<img alt="test" src="../resources/img/tap7.png" style="border-radius: 20%; height: 60px; width: 60px;  vertical-align:middle;">
+       <span><a href="https://cafe.naver.com/anycallusershow" style="font-weight: bold;">삼성스마트폰-갤럭시Z플립6/폴드6/갤럭시24울트라/갤럭시워치7
+       </a><br>
+       <a style="color: #808080;  font-size: 15px;">갤럭시Z플립6/폴드6/갤럭시워치7울트라/갤럭시링/갤럭시버즈3프로/갤럭시갤S24울트라</a><br>
+       <i class="fa-solid fa-user"></i><a style="color: #808080;  font-size: 13px;"> 1,184,439  '숲'</a> <i class="fa-regular fa-circle-up"></i> <a style="color: #808080;  font-size: 13px;"> 120,542</a>
+       </span>
+    	<div class="vertical-content"></div>  
+    	     
+       	<img alt="test" src="../resources/img/tap8.png" style="border-radius: 20%; height: 60px; width: 60px;  vertical-align:middle;">
+       <span><a href="https://cafe.naver.com/facebot" style="font-weight: bold;">갤럭치워치 커뮤니티 [갤럭시워치7/ 워치7 울트라 / 워치6,5]
+       </a><br>
+       <a style="color: #808080;  font-size: 15px;">국내 최대 갤럭시워치 카페 / 갤리치워치7, 워치7 울트라/워치6 등 삼성 웨어러블</a><br>
+       <i class="fa-solid fa-user"></i><a style="color: #808080;  font-size: 13px;"> 185,769  나무2단계</a> <i class="fa-regular fa-circle-up"></i> <a style="color: #808080;  font-size: 13px;"> 66,530</a>
+       </span>
+    	<div class="vertical-content"></div>   
+    	    
+       	<img alt="test" src="../resources/img/tap9.png" style="border-radius: 20%; height: 60px; width: 60px;  vertical-align:middle;">
+       <span><a href="https://cafe.naver.com/rolexy" style="font-weight: bold;">갤럭치워치 커스텀 사관학교 [ 워치7 / 워치6 / 소루모이]
+       </a><br>
+       <a style="color: #808080;  font-size: 15px;">갤럭시워치 롤렉스 커스텀 및 워치페이스 꿀팁을 공개합니다.</a><br>
+       <i class="fa-solid fa-user"></i><a style="color: #808080;  font-size: 13px;"> 16,558  열매4단계</a> <i class="fa-regular fa-circle-up"></i> <a style="color: #808080;  font-size: 13px;"> 48,766</a>
+       </span>
+    	<div class="vertical-content"></div>       
+    </div>
+ 	</div>
+
+</div>
+
+</body>
+</html>
