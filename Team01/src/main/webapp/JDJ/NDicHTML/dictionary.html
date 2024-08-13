@@ -9,50 +9,24 @@ body{
 	margin: 0px;
 }
 
-.header_content_left_element_wrap::before{
-	content: "";
-	position: absolute;
-	top: 20px;
-	height: 15px;
-	width: 1px;
-	border-left: 1px solid black;
-	left: 135px;
-}
-#top li{
-	display: inline-block;
-	width: 39px;
-	height: 39px;
-	font-size: 9px;
-	text-align: center;
-}
-#middleLeft li{
-	display: inline-block;
-}
-#middleRight li{
-	display: inline-block;
-}
-.middleUnderVoca ul {
-	list-style-type: none;
-}
-.middleUnderVoca div {
-	display: inline-block;
-	font-size: 12px;
-	vertical-align: top;
-}
-
-.middleUnder div {
-	font-size: 12px;
-	
-}
-#middleUnderRight ul {
-	list-style-type: none;
-	display: inline-block;
-	
-}
-#header{
+/* .header_content_left_element_wrap::before{ */
+/* 	position: absolute; */
+/* 	content: ""; */
+/* 	top: 20px; */
+/* 	height: 15px; */
+/* 	width: 1px; */
+/* 	border-left: 1px solid black; */
+/* 	left: 135px; */
+/* } */
+#uphead{
 	border-bottom: 1px solid #00af35;
     background: #03c75a;
+
 }
+/* #header{ */
+/* 	border-bottom: 1px solid #00af35; */
+/*     background: #03c75a; */
+/* } */
 #header_content{
 	width: 1020px;
 	height:54px;
@@ -64,13 +38,69 @@ body{
 	margin-left:20px; 
 	float: left;
 }
+/* #header_content_left a span span::before{  */
+/* 	content: ""; */
+/* 	top: 20px; */
+/* 	height: 15px; */
+/* 	width: 1px; */
+/* 	font-size:10px; */
+/* 	border-left: 1px solid black; */
+/* } */
+#header_content_left_naver::before{ 
+	font-size: 0px;
+}
+#header_content_left_dic::before{
+	position:relative;
+	content: "";
+	top: 6px;
+	right: 8px;
+	font-size:11px;
+	border-left: 1px solid #00b336;
+}
+#header_content_left_papago::before{
+	position:relative;
+	content: "";
+	top: 3px;
+	right: 3px;
+	font-size:11px;
+	border-left: 1px solid #00b336;
+}
+#header_content_left_dicPro::before{
+	position:relative;
+	content: "";
+	top: 3px;
+	right: 8px;
+	font-size:11px;
+	border-left: 1px solid #00b336;
+}
+#header_content_left_trans::before{
+	position:relative;
+	content: "";
+	top: 3px;
+	right: 7px;
+	font-size:11px;
+	border-left: 1px solid #00b336;
+}
+#header_content_left_jisik::before{
+	position:relative;
+	content: "";
+	top: 3px;
+	right: 5px;
+	font-size:11px;
+	border-left: 1px solid #00b336;
+}
+#header_content_left a span span{
+	
+	margin-left:5px;
+	margin-right:5px;
+}
 #header_content_left a span{
-	float: left;
+	float: left; 
 	/*display: inline-block;*/ 
 	height: 54px;
 	/*overflow: hidden;*/
 	font-size: 0px;
-	text-indent: -100px;
+/* 	text-indent: -100px; */
 	vertical-align: top;
 	
 }
@@ -126,6 +156,156 @@ body{
 
 
 
+#header_content_right_ul{
+	list-style: none;
+	display: inline-block;
+	margin: 0;
+	height: 54px;
+}
+#header_content_right_ul li{
+	display: inline-block;
+	width: 54px;
+	height: 54px;
+	vertical-align: top;
+	
+}
+#login_box{
+	display: inline-block;
+	border: 1px solid #00b336;
+	width: 54px;
+	height: 23px;
+	color: white;
+	font-family: '나눔고딕',NanumGothic,'돋움',Dotum,'Apple SD Gothic Neo',Helvetica,Sans-serif !important;
+	font-size: 11px;
+/* 	text-decoration: none; */ 
+
+}
+#login_box span{
+	display: block;
+	width: 35px;
+	height: 12px;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 6px; 
+}
+#header_content_right_ul li a{
+	text-decoration: none;
+}
+#header_content_right_ul_menu{
+	display: inline-block;
+	width: 19px;
+	border-left: 1px solid #00b336;
+	border-right: 1px solid #00b336;
+ 	background: url("../img/sp_gnb_v16.png"); 
+ 	overflow: hidden;
+ 	text-indent: -130px;
+	height: 19px;
+	background-position: -242px -102px;
+	padding: 18px 18px;
+	background-clip: content-box;
+}
+#header_content_right_li2{
+	
+	
+	width: 55px;
+	height: 55px;
+	
+}
+#header_content_right_li1{
+	margin-top: 16px;
+} 
+
+#downhead{
+	border-bottom: 1px solid #e5e5e5; 
+	background-color: #fff;
+	height: 38px;
+}
+#downhead_content{
+	margin: 0 auto; 
+/* 	border-bottom:2px dashed yellow;  */
+/* 	height: 54px; */
+	width:1020px; 
+	height: 39px;
+}
+#top li{
+	display: inline-block;
+/* 	width: 52px; */
+	height: 15px;
+	font-size: 12px;
+	font-family:Helvetica, nanumgothic, '나눔고딕', NanumSquare, dotum, sans-serif;
+	font-weight: bold; 
+	text-align: center;
+	vertical-align: top;
+	margin-top: 12px;
+	margin-right: 20px;
+	
+}
+#top{
+	margin: 0;
+	padding-left: 20px;
+}
+.text2{width: 26px; margin-left: 0px;}
+.text3{width: 39px;}
+.text4{width: 52px;}
+
+#middleLeft{
+	padding: 76px 36px 74px 70px;
+/* 	width: 500px;  */
+	float: left;
+}
+#middleRight{
+	padding: 76px 69px 74px 36px;
+/* 	width: 50%;  */
+	float: right;
+}
+
+#middle_content{
+	height: 284px; 
+	border-bottom: 1px solid #efefef;
+	background-color: #fafafa;
+}
+#middleLeft li{
+	display: inline-block;
+}
+#middleRight li{
+	display: inline-block;
+}
+.middleUnderVoca ul {
+	list-style-type: none;
+}
+.middleUnderVoca div {
+	display: inline-block;
+	font-size: 12px;
+	vertical-align: top;
+}
+
+.middleUnder div {
+	font-size: 12px;
+	
+}
+#middleUnderRight ul {
+	list-style-type: none;
+	display: inline-block;
+	
+}
+#upmid{
+	height: 284px; 
+	width: 1040px; 
+	margin: 0 auto; 
+/* 	border-bottom: 2px dashed maroon; */
+}
+#middleRight::before{
+	display:block;
+	position: relative;
+	float: left;
+	content: "";
+	position: relative;
+	width: 1px;
+	height: 150px;
+	border-left: 1px solid #efefef;
+	right: 38px;
+	top: 25px;
+}
 
 </style>
 </head>
@@ -134,8 +314,10 @@ body{
 
 <!-- 윗부분 -->
 <div id="header" >
-<div id="header_content">
 
+<div id="uphead">
+
+<div id="header_content">
 <div id="header_content_left" >
 
 	<a href="https://www.naver.com/" style="font-size: 0px;">
@@ -173,44 +355,58 @@ body{
 	<span id="header_content_left_jisik" style="width: 83px;">지식백과</span>
 	</span>
 	</a>
-	
-	
-	
-	
-</div>
+</div><!-- header_content_left -->
 
-<div style="float: right;">
-	<span><a href="https://nid.naver.com/nidlogin.login?url=https%3A%2F%2Fdict.naver.com%2F">로그인</a></span>
-	<span>icon</span>
-</div>
+<div id="header_content_right" style="float: right;">
+	<ul id="header_content_right_ul">
+		<li id="header_content_right_li1">
+			<a href="https://nid.naver.com/nidlogin.login?url=https%3A%2F%2Fdict.naver.com%2F">
+			<span id="login_box">
+				<span>로그인</span>
+			</span>
+			</a>
+		</li>
+		<li id="header_content_right_li2">
+			<span id="header_content_right_ul_menu">
+				<span style="float: right;">메뉴 아이콘</span>
+			</span>
+		</li>
+	</ul>
+</div><!-- header_content_right -->
 
-</div>
-</div>
+</div><!-- header_content -->
+</div><!-- uphead -->
 
-<div style="border-bottom: 1px solid red; height: 39px;">
-<div style=" margin: 0 auto; border-bottom:2px dashed yellow; height: 54px;width:1020px; height: 39px; ">
+<div id="downhead">
+
+<div id="downhead_content" >
 	<ul id="top">
-		<li>사전홈</li>
-		<li>영어</li>
-		<li>국어</li>
-		<li>한자</li>
-		<li>일본어</li>
-		<li>중국어</li>
-		<li>프랑스어</li>
-		<li>스페인어</li>
-		<li>독일어</li>
-		<li>영영</li>
-		<li>더보기</li>
+		<li class="text3">사전홈</li>
+		<li class="text2">영어</li>
+		<li class="text2">국어</li>
+		<li class="text2">한자</li>
+		<li class="text3">일본어</li>
+		<li class="text3">중국어</li>
+		<li class="text4">프랑스어</li>
+		<li class="text4">스페인어</li>
+		<li class="text3">독일어</li>
+		<li class="text2">영영</li>
+		<li class="text3">더보기</li>
 	</ul>
 </div>
-</div>
 
+</div><!-- downhead -->
+
+</div><!-- header -->
+
+<!-- ------------------------------------------------------------------- -->
 <!-- 중간부분 -->
 <div> <!-- wrap진짜 -->
-<div style="height: 284px; border-bottom: 1px solid #ccc;"><!-- 중간 전체 wrap -->
+<div id="middle_content"><!-- 중간 전체 wrap -->
 
-<div style="height: 284px; width: 1000px; margin: 0 auto; border-bottom: 2px dashed maroon;"><!-- 중간 내용물 wrap할듯 -->
-<div id="middleLeft" style=" width: 500px; float: left;"><!-- 중간-왼쪽 부분 -->
+<div id="upmid">
+
+<div id="middleLeft"><!-- 중간-왼쪽 부분 -->
 	<h2 style="display: inline-block;">어학사전</h2>
 	<ul style="display: inline-block;">
 		<li>영어단어장</li>
@@ -234,7 +430,7 @@ body{
 	</div>
 </div>
  
-<div id="middleRight" style=" width: 50%; float: right;"><!-- 중간-왼쪽 부분 -->
+<div id="middleRight"><!-- 중간-왼쪽 부분 -->
 	<h2 style="display: inline-block;">지식백과</h2>
 	<ul>
 		<li>전체 검색</li>
@@ -250,7 +446,8 @@ body{
 	</form>
 	</div>
 </div>
-</div> 
+
+</div> <!-- upmid -->
 
 
 </div> 
